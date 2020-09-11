@@ -5,26 +5,22 @@ import java.util.Scanner;
 
 public class Food {
 
-    private int foodItemID;
+    private int foodID;
     private String foodName;
     private double foodItemPrice;
 
-    public Food(){
-
-    }
-
-    public Food(int foodItemID, String foodName, double foodItemPrice) {
-        this.foodItemID = foodItemID;
+    public Food(int foodID, String foodName, double foodItemPrice) {
+        this.foodID = foodID;
         this.foodName = foodName;
         this.foodItemPrice = foodItemPrice;
     }
 
-    public int getFoodItemID() {
-        return foodItemID;
+    public int getFoodID() {
+        return foodID;
     }
 
-    public void setFoodItemID(int foodItemID) {
-        this.foodItemID = foodItemID;
+    public void setFoodID(int foodID) {
+        this.foodID = foodID;
     }
 
     public String getFoodName() {

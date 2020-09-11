@@ -1,41 +1,38 @@
 package Menu;
 
-public class Drinks {
+public class Beverage {
 
-    private int drinkID;
-    private String drinkName;
-    private double drinkPrice;
+    private int beverageID;
+    private String beverageName;
+    private double beveragePrice;
 
-    public Drinks() {
+    public Beverage(int beverageID, String beverageName, double beveragePrice) {
+        this.beverageID = beverageID;
+        this.beverageName = beverageName;
+        this.beveragePrice = beveragePrice;
     }
 
-    public Drinks(int drinkID, String drinkName, double drinkPrice) {
-        this.drinkID = drinkID;
-        this.drinkName = drinkName;
-        this.drinkPrice = drinkPrice;
+    public int getBeverageID() {
+        return beverageID;
     }
 
-    public int getDrinkID() {
-        return drinkID;
+    public void setBeverageID(int beverageID) {
+        this.beverageID = beverageID;
     }
 
-    public void setDrinkID(int drinkID) {
-        this.drinkID = drinkID;
+    public String getBeverageName() {
+        return beverageName;
     }
 
-    public String getDrinkName() {
-        return drinkName;
+    public void setBeverageName(String beverageName) {
+        this.beverageName = beverageName;
     }
 
-    public void setDrinkName(String drinkName) {
-        this.drinkName = drinkName;
+    public double getBeveragePrice() {
+        return beveragePrice;
     }
 
-    public double getDrinkPrice() {
-        return drinkPrice;
-    }
-
-    public void setDrinkPrice(double drinkPrice) {
-        this.drinkPrice = drinkPrice;
+    public void setBeveragePrice(double beveragePrice) {
+        this.beveragePrice = beveragePrice;
     }
 }

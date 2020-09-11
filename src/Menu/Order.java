@@ -1,54 +1,39 @@
 package Menu;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Order {
 
-    private int orderID;
-    private List<Food> foods = new ArrayList<>();
-    private List<Drinks> drinks = new ArrayList<>();
+    private Map<Food, Integer> foods = new HashMap<>();
+    private Map<Beverage, Integer> beverages = new HashMap<>();
 
-    public Order(Food food, Drinks drinks) {
-        orderID = 0;
+    public double getTotalBeverage(){
+        double totalBeverage = 0;
+        int quantityBeverage = 0;
+        for (Beverage beverage : this.beverages.keySet()){
+            totalBeverage = beverage.getBeveragePrice()*quantityBeverage;
+        }
+        return totalBeverage;
     }
 
-    public Order(int orderID) {
-        this.orderID = orderID;
+   public void addBeverage(Beverage beverage, Integer quantity){
+        this.beverages.put(beverage, quantity);
     }
 
-    public Order(int food, int drinks) {
+    public double getTotalFood(){
+        double totalFood = 0;
+        int quantityFood = 0;
+        for (Food food : this.foods.keySet()){
+            totalFood = food.getFoodItemPrice()*quantityFood;
+        }
+        return totalFood;
     }
 
-    public Order(int food, Drinks drinks) {
+    public void addFood(Food food, Integer quantity){
+        this.foods.put(food, quantity);
     }
 
-    public List<Food> getFoods() {
-        return foods;
-    }
 
-    public void setFoods(List<Food> foods) {
-        this.foods = foods;
-    }
-
-    public List<Drinks> getDrinks() {
-        return drinks;
-    }
-
-    public void setDrinks(List<Drinks> drinks) {
-        this.drinks = drinks;
-    }
-
-    public int getOrderID() {
-        return orderID;
-    }
-
-    public void setOrderID(int orderID) {
-        this.orderID = orderID;
-    }
-
-    public void addOrder(Food food, Drinks drink){
-        foods.add(food);
-        drinks.add(drink);
-    }
 }
